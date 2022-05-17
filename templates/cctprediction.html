@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CreditCard Prediction</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Projects Website</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+</head>
+
+<body>
+  <div class="scroll-up-btn">
+    <i class="fas fa-angle-up"></i>
+  </div>
+  <nav class="navbar">
+    <div class="max-width">
+        <div class="logo"><a href="/">SE<span>M<sup>2</sup>.</span></a></div>
+        <ul class="menu">
+            <li><a href="/" class="menu-btn">Home</a></li>
+            <li><a href="/#about" class="menu-btn">About</a></li>
+            <li><a href="/#projects" class="menu-btn">Projects</a></li>
+            <li><a href="/#skills" class="menu-btn">Skills</a></li>
+            <li><a href="/#teams" class="menu-btn">Teams</a></li>
+        </ul>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+  </nav>
+
+
+  <section class="cct-des" id="cct-des">
+    <div class="max-width">
+        <h2 class="title">CreditCard Transaction Prediction</h2>
+        <div class="cct-des-content">
+            
+            <div class="column right">
+                
+                <p>This is an credit card detection, in this project build a machine learning system in python that can detect whether the credit card transaction legit or fraud. 
+                  </p>
+                <br>
+                <p>Work flow: <br>
+                  Credit card data ➡️ data preprocessing ➡️ data analysis ➡️ train test split ➡️ logistic regression model ➡️ evaluation</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cct-datacleaning" id="cct-datacleaning-content">
+    <div class="max-width">
+        <h1 class="title"></h1>
+        <div class="cct-datacleaning-content">
+            <div class="column left">
+                <img class="img" src="../static/images/sms_datacleaning_img.jpg" alt=""/>
+            </div>
+            <div class="column right">
+                <p>This dataset is highly unbalanced. We have two labels (0 - normal transaction, 1 - fraud transaction) 
+                  We had separated all normal transaction and legit transaction from this data frame with two variables.</p>
+                <br>
+                <p>done a statistical measure of data for legit and fraud in separate from. And then we compare the value of two transaction it is used for machine learning for identify whether transaction are legit or fraud.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="cct-modelling" id="cct-modelling-content">
+    <div class="max-width">
+        <h1 class="title"></h1>
+        <div class="cct-modelling-content">
+            <div class="column left">
+                <img class="img" src="../static/images/sms_modelling_img.jpg" alt=""/>
+            </div>
+            <div class="column right">
+                <p>We had split the data into train and test. And then we created a two variables x (feature) and y (class). We already import the sklearn. Model for train-test-split library for splitting train and test the data.
+                  <br>
+                  And we mentioned 4 variables x-train, x-test, y-train, y-test. 20 % of data used for test the data and remaining 80% of data used for train in randomly. And found size of for 4 variables.
+                </p>
+                <br>
+                <p>We used logistics regression model. Generally logistics regression model are used for binary classification models. And we already import sklearn logistics regression library. We created the model is Logistic regression.
+                  <br>
+                  We train a data with help of Logistic regression model, for train a date we need to mention the function ".fit" is used for fit the data into Logistic regression model.
+                </p>
+                <p> we need to find a performance for our model evaluation .and model evaluation based on accuracy score.
+                  <br>
+                  we need to find accuracy score for train data and test data separately with the help of model.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cct-con" id="cct-con">
+    <div class="max-width">
+        <h2 class="title"></h2>
+        <div class="cct-con-content">
+            
+            <div class="column right">
+                
+                <p>In this project we created a machine learning system in python . that can detect whether the credit card transaction Legit  or fraud using Logistic regression model.</p>
+                <br>
+                <p>And then we split the train data and test data randomly and provide the have good accuracy score more than 93%.</p>
+            </div>
+            <a href="/projectcctcode">Get Full Code Here!</a>
+        </div>
+    </div>
+</section>
+
+  <section class="cct-inputs" id="gld-inputs">
+    <div class="max-width">
+      <h2 class="title">CreditCard Transaction Prediction</h2>
+      <div class="cct-inputs-content">
+        <h1 >CreditCard Transaction Prediction</h1>
+        <h5>Enter the Input to find a the transaction is legle
+        <br>
+        <br>
+        </h5>
+        <form action='/predictcct' method="POST" class="input-form">
+          <div class="row">
+            <div class="input-field-1">
+                <label for="first_name"><b>Time</b></label>
+                <br>
+              <input placeholder="time" name="time" class="input-message" type="text" required="required">
+            </div>
+    
+            <div class="input-field-1">
+                <label for="first_name"><b>v1</b></label>
+                <br>
+              <input placeholder="v1" name="v1" class="input-message" type="text" required="required" >
+            </div>
+    
+            <div class="input-field-1">
+                <label for="first_name"><b>v2</b></label>
+                <br>
+              <input placeholder="v2" name="v2" class="input-message" type="text" required="required" >
+            </div>
+            <div class="input-field-1">
+                <label for="first_name"><b>v3</b></label>
+                <br>
+              <input placeholder="v3" name="v3" class="input-message" type="text" required="required" >
+            </div>
+            <div class="input-field-1">
+                <label for="first_name"><b>v4</b></label>
+                <br>
+              <input placeholder="v4" name="v4" class="input-message" type="text" required="required" >
+            </div>
+            <div class="input-field-1">
+                <label for="first_name"><b>v5</b></label>
+                <br>
+              <input placeholder="v5" name="v5" class="input-message" type="text" required="required" >
+            </div>
+            <div class="input-field-1">
+                <label for="first_name"><b>v6</b></label>
+                <br>
+              <input placeholder="v6" name="v6" class="input-message" type="text" required="required" >
+            </div>
+            <div class="input-field-1">
+                <label for="first_name"><b>v7</b></label>
+                <br>
+              <input placeholder="v7" name="v7" class="input-message" type="text" required="required" >
+            </div>
+    
+            <div class="input-field-1">
+    
+              <label for="first_name"><b>v8</b></label>
+                <br>
+              <input name="v8" placeholder="v8" class="input-message" type="text" required="required" >
+    
+            </div>
+    
+            <div class="input-field-1">
+                <label for="first_name"><b>v9</b></label>
+                <br>
+              <input name="v9" placeholder="v9" class="input-message" type="text" required="required" >
+    
+            </div>
+
+    
+  
+          <div class="input-field-1">
+              <label for="first_name"><b>v10</b></label>
+              <br>
+            <input placeholder="v10" name="v10" class="input-message" type="text" required="required" >
+          </div>
+  
+          <div class="input-field-1">
+              <label for="first_name"><b>v11</b></label>
+              <br>
+            <input placeholder="v11" name="v11" class="input-message" type="text" required="required" >
+          </div>
+          <div class="input-field-1">
+              <label for="first_name"><b>v12</b></label>
+              <br>
+            <input placeholder="v12" name="v12" class="input-message" type="text" required="required">
+          </div>
+          <div class="input-field-1">
+              <label for="first_name"><b>v13</b></label>
+              <br>
+            <input placeholder="v13" name="v13" class="input-message" type="text" required="required" >
+          </div>
+          <div class="input-field-1">
+              <label for="first_name"><b>v14</b></label>
+              <br>
+            <input placeholder="v1" name="v14" class="input-message" type="text" required="required" >
+          </div>
+          <div class="input-field-1">
+              <label for="first_name"><b>v15</b></label>
+              <br>
+            <input placeholder="v15" name="v15" class="input-message" type="text" required="required" >
+          </div>
+          <div class="input-field-1">
+              <label for="first_name"><b>v16</b></label>
+              <br>
+            <input placeholder="v16" name="v16" class="input-message" type="text" required="required" >
+          </div>
+  
+          <div class="input-field-1">
+  
+            <label for="first_name"><b>v17</b></label>
+              <br>
+            <input name="v17" placeholder="v17" class="input-message" type="text" required="required" >
+  
+          </div>
+  
+          <div class="input-field-1">
+              <label for="first_name"><b>v18</b></label>
+              <br>
+            <input name="v18" placeholder="v18" class="input-message" type="text" required="required" >
+  
+          </div>
+
+          <div class="input-field-1">
+            <label for="first_name"><b>v19</b></label>
+            <br>
+          <input name="v19" placeholder="v19" class="input-message" type="text" required="required" >
+
+          </div>
+          <div class="input-field-1">
+            <label for="first_name"><b>v20</b></label>
+            <br>
+          <input name="v20" placeholder="v20" class="input-message" type="text" required="required" >
+
+          </div>
+          <div class="input-field-1">
+            <label for="first_name"><b>v21</b></label>
+            <br>
+          <input placeholder="v21" name="v21" class="input-message"  type="text" required="required" >
+        </div>
+        <div class="input-field-1">
+            <label for="first_name"><b>v22</b></label>
+            <br>
+          <input placeholder="v22" name="v22" class="input-message"  type="text" required="required">
+        </div>
+        <div class="input-field-1">
+            <label for="first_name"><b>v23</b></label>
+            <br>
+          <input placeholder="v23" name="v23" class="input-message"  type="text" required="required" >
+        </div>
+        <div class="input-field-1">
+            <label for="first_name"><b>v24</b></label>
+            <br>
+          <input placeholder="v24" name="v24" class="input-message"  type="text" required="required" >
+        </div>
+        <div class="input-field-1">
+            <label for="first_name"><b>v25</b></label>
+            <br>
+          <input placeholder="v25" name="v25" class="input-message"  type="text" required="required">
+        </div>
+        <div class="input-field-1">
+            <label for="first_name"><b>v26</b></label>
+            <br>
+          <input placeholder="v26" name="v26" class="input-message" type="text" required="required" >
+        </div>
+
+        <div class="input-field-1">
+
+          <label for="first_name"><b>v27</b></label>
+            <br>
+          <input name="v27" placeholder="v27" class="input-message" type="text" required="required" >
+
+        </div>
+
+        <div class="input-field-1">
+            <label for="first_name"><b>v28</b></label>
+            <br>
+          <input name="v28" placeholder="v28" class="input-message" type="text" required="required" >
+
+        </div>
+        <div class="input-field-1">
+          <label for="first_name"><b>Amount</b></label>
+          <br>
+        <input name="amount" placeholder="Amount" class="input-message" type="text" required="required">
+
+      </div>
+    
+          </div>
+          <div class="button">
+              <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Predict Percentage
+              </button>
+            </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+      
+        
+  <script src='../static/js/script.js'></script> 
+  </body>
+</html>

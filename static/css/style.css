@@ -1,0 +1,2079 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Index.html */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* .contact */
+
+.about,.about-ebrahim, .about-shahul, .about-nijam, .about-mukesh, .services, .skills, .teams, 
+.sms-des, .sms-datacleaning, .sms-datapreprocessing, .sms-modelling, .sms-con, 
+.cct-des, .cct-datacleaning, .cct-datapreprocessing, .cct-modelling, .cct-con,
+.gld-des, .gld-datacleaning, .gld-datapreprocessing, .gld-modelling, .gld-con,
+.cal-des, .cal-datacleaning, .cal-datapreprocessing, .cal-modelling, .cal-con, 
+.sms-code, .sms-inputs, .sms-inputs-predict, 
+.container_about, 
+.cct-inputs, .cct-inputs-predict,
+.gld-inputs, .gld-inputs-predict,
+.cal-inputs, .cal-inputs-predict,
+footer{
+    font-family: 'Poppins', sans-serif;
+}
+/* .contact .contact-content */
+
+.about .about-content,
+.about-ebrahim, .about-ebrahim-content,
+.about-shahul, .about-shahul-content,
+.about-nijam, .about-nijam-content,
+.about-mukesh, .about-mukesh-content,
+.services .serv-content,
+.skills .skills-content,
+.sms-des .sms-des-content,
+.sms-datacleaning .sms-datacleaning-content,
+.sms-datapreprocessing .sms-datapreprocessing-content,
+.sms-modelling .sms-modelling-content,
+.sms-con .sms-con-content,
+.sms-code .sms-code-content,
+.sms-inputs, .sms-inputs-predict,
+.cct-inputs, .cct-inputs-predict,
+.cct-des .cct-des-content,
+.cct-datacleaning .cct-datacleaning-content,
+.cct-datapreprocessing .cct-datapreprocessing-content,
+.cct-modelling .cct-modelling-content,
+.cct-con .cct-con-content,
+.gld-inputs, .gld-inputs-predict,
+.gld-des .gld-des-content,
+.gld-datacleaning .gld-datacleaning-content,
+.gld-datapreprocessing .gld-datapreprocessing-content,
+.gld-modelling .gld-modelling-content,
+.gld-con .gld-con-content,
+.cal-inputs, .cal-inputs-predict,
+.cal-des .cal-des-content,
+.cal-datacleaning .cal-datacleaning-content,
+.cal-datapreprocessing .cal-datapreprocessing-content,
+.cal-modelling .cal-modelling-content,
+.cal-con .cal-con-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+/* home section styling */
+.home{
+    display: flex;
+    background: url("../images/home_page_img.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 25px;
+}
+.home .home-content .text-2{
+    font-size: 37px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: red;
+    background: none;
+}
+
+/* about section styling */
+.about .title::after{
+    content: "who we are";
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: crimson;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+/* services section styling */
+.services, .teams{
+    color:#fff;
+    background: #111;
+}
+.services .title::before,
+
+.teams .title::before{
+    background: #fff;
+}
+.services .title::after,
+.teams .title::after{
+    background: #111;
+    content: "what we Done";
+}
+.services .serv-content .card{
+    width: calc(25% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+    background: crimson;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.services .serv-content .card:hover i{
+    color: #fff;
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* skills section styling */
+
+.skills .title::after{
+    background: rgb(255, 255, 255);
+    content: "what we know";
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: crimson;
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+.skills-content .right .html::before{
+    width: 90%;
+}
+.skills-content .right .css::before{
+    width: 60%;
+}
+.skills-content .right .python::before{
+    width: 70%;
+}
+.skills-content .right .machinelearning::before{
+    width: 70%;
+}
+.skills-content .right .Programmingknowledge::before{
+    width: 75%;
+}
+
+/* teams section styling */
+.teams .title::after{
+    content: "who with me";
+}
+.teams .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover{
+    background: crimson;
+}
+.teams .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.teams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important;
+}
+
+/* contact section styling */
+/* .contact .title::after{
+    content: "get in touch";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button-area{
+  display: flex;
+  align-items: center;
+}
+.right form .button-area button{
+  color: #fff;
+  display: block;
+  width: 160px!important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: crimson;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.right form .button-area button:hover{
+  color: crimson;
+  background: none;
+} */
+/* footer section styling */
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .about .about-content .left img,
+    .about-ebrahim .about-ebrahim-content .left img,
+    .about-shahul .about-shahul-content .left img,
+    .about-nijam .about-nijam-content .left img,
+    .about-mukesh .about-mukesh-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .sms-datacleaning .sms-datacleaning-content .left .img,
+    .cct-datacleaning .cct-datacleaning-content .left .img,
+    .gld-datacleaning .gld-datacleaning-content .left .img,
+    .cal-datacleaning .cal-datacleaning-content .left .img{
+        max-height: 350px;
+        max-width: 350px;
+    }
+    .sms-datapreprocessing .sms-datapreprocessing-content .left .img,
+    .cct-datapreprocessing .cct-datapreprocessing-content .left .img,
+    .gld-datapreprocessing .gld-datapreprocessing-content .left .img,
+    .cal-datapreprocessing .cal-datapreprocessing-content .left .img{
+        max-height: 350px;
+        max-width: 350px;
+    }
+    .sms-modelling .sms-modelling-content .left .img,
+    .cct-modelling .cct-modelling-content .left .img,
+    .gld-modelling .gld-modelling-content .left .img,
+    .cal-modelling .cal-modelling-content .left .img{
+        max-height: 350px;
+        max-width: 350px;
+    }
+    .about1 .max-width .about1-content .text1{
+        font-size: 35px;
+    }
+    .cct-inputs .max-width .cct-inputs-content .input-form .row,
+    .gld-inputs .max-width .gld-inputs-content .input-form .row,
+    .cal-inputs .max-width .cal-inputs-content .input-form .row{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .about1 .max-width .about1-content .text1{
+        font-size: 35px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 35px;
+    }
+    .home .home-content .text-3{
+        font-size: 40px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    /* About-Ebrahim */
+    .about-ebrahim .about-ebrahim-content .column{
+        width: 100%;
+    }
+    .about-ebrahim .about-ebrahim-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about-ebrahim .about-ebrahim-content .right{
+        flex: 100%;
+    }
+    /* About-Shahul */
+    .about-shahul .about-shahul-content .column{
+        width: 100%;
+    }
+    .about-shahul .about-shahul-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about-shahul .about-ebrahim-content .right{
+        flex: 100%;
+    }
+
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    /* .contact .contact-content .column */
+    .skills .skills-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .sms-des .sms-des-content .right,
+    .cct-des .cct-des-content .right,
+    .gld-des .gld-des-content .right,
+    .cal-des .cal-des-content .right{
+        flex: 100%;
+    }
+    .sms-datacleaning .sms-datacleaning-content .column,
+    .cct-datacleaning .cct-datacleaning-content .column,
+    .gld-datacleaning .gld-datacleaning-content .column,
+    .cal-datacleaning .cal-datacleaning-content .column{
+        width: 100%;
+    }
+    .sms-datacleaning .sms-datacleaning-content .left,
+    .cct-datacleaning .cct-datacleaning-content .left,
+    .gld-datacleaning .gld-datacleaning-content .left,
+    .cal-datacleaning .cal-datacleaning-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .sms-datacleaning .sms-datacleaning-content .right,
+    .cct-datacleaning .cct-datacleaning-content .right,
+    .gld-datacleaning .gld-datacleaning-content .right,
+    .cal-datacleaning .cal-datacleaning-content .right{
+        flex: 100%;
+    }
+    .sms-datapreprocessing .sms-datapreprocessing-content .column,
+    .cct-datapreprocessing .cct-datapreprocessing-content .column,
+    .gld-datapreprocessing .gld-datapreprocessing-content .column,
+    .cal-datapreprocessing .cal-datapreprocessing-content .column{
+        width: 100%;
+    }
+    .sms-datapreprocessing .sms-datapreprocessing-content .left,
+    .cct-datapreprocessing .cct-datapreprocessing-content .left,
+    .gld-datapreprocessing .gld-datapreprocessing-content .left,
+    .cal-datapreprocessing .cal-datapreprocessing-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .sms-datapreprocessing .sms-datapreprocessing-content .right,
+    .cct-datapreprocessing .cct-datapreprocessing-content .right,
+    .gld-datapreprocessing .gld-datapreprocessing-content .right,
+    .cal-datapreprocessing .cal-datapreprocessing-content .right{
+        flex: 100%;
+    }
+    .sms-modelling .sms-modelling-content .column,
+    .cct-modelling .cct-modelling-content .column,
+    .gld-modelling .gld-modelling-content .column,
+    .cal-modelling .cal-modelling-content .column{
+        width: 100%;
+    }
+    .sms-modelling .sms-modelling-content .left,
+    .cct-modelling .cct-modelling-content .left,
+    .gld-modelling .gld-modelling-content .left,
+    .cal-modelling .cal-modelling-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .sms-modelling .sms-modelling-content .right,
+    .cct-modelling .cct-modelling-content .right,
+    .gld-modelling .gld-modelling-content .right,
+    .cal-modelling .cal-modelling-content .right{
+        flex: 100%;
+    }
+    .sms-con .sms-con-content .right,
+    .cct-con .cct-con-content .right,
+    .gld-con .gld-con-content .right,
+    .cal-con .cal-con-content .right{
+        flex: 100%;
+    }
+    .sms-code .sms-code-content .right{
+        flex: 100%;
+    }
+    
+    .about1 .max-width .about1-content .text1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 33px;
+    }
+    .home .home-content .text-3{
+        font-size: 37px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+    }
+    .about1 .max-width .about1-content .text1{
+        font-size: 26px;
+    }
+    .cct-inputs .max-width .cct-inputs-content .input-form .row,
+    .gld-inputs .max-width .gld-inputs-content .input-form .row,
+    .cal-inputs .max-width .cal-inputs-content .input-form .row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 23px;
+    }
+    .home .home-content .text-3{
+        font-size: 23px;
+    }
+    .about .about-content .right .text,
+    .about-ebrahim .about-ebrahim-content .right .text,
+    .about-shahul .about-shahul-content .right .text,
+    .about-nijam .about-nijam-content .right .text,
+    .about-mukesh .about-mukesh-content .right .text,
+    .skills .skills-content .left .text,
+    .sms-des .sms-des-content .right .text,
+    .sms-datacleaning .sms-datacleaning-content .right .text,
+    .sms-datapreprocessing .sms-datapreprocessing-content .right .text,
+    .sms-modelling .sms-modelling-content .right .text,
+    .sms-con .sms-con-content .right .text,
+    .sms-code .sms-code-content, 
+    .sms-inputs, .sms-inputs-content, .sms-inputs-predict, .sms-inputs-predict-content,
+    .cct-des .cct-des-content .right .text,
+    .cct-datacleaning .cct-datacleaning-content .right .text,
+    .cct-datapreprocessing .cct-datapreprocessing-content .right .text,
+    .cct-modelling .cct-modelling-content .right .text,
+    .cct-con .cct-con-content .right .text,
+    .cct-inputs, .cct-inputs-content, .cct-inputs-predict, .cct-inputs-predict-content,
+    .gld-des .gld-des-content .right .text,
+    .gld-datacleaning .gld-datacleaning-content .right .text,
+    .gld-datapreprocessing .gld-datapreprocessing-content .right .text,
+    .gld-modelling .gld-modelling-content .right .text,
+    .gld-con .gld-con-content .right .text,
+    .gld-inputs, .gld-inputs-content, .gld-inputs-predict, .gld-inputs-predict-content,
+    .cal-des .cal-des-content .right .text,
+    .cal-datacleaning .cal-datacleaning-content .right .text,
+    .cal-datapreprocessing .cal-datapreprocessing-content .right .text,
+    .cal-modelling .cal-modelling-content .right .text,
+    .cal-con .cal-con-content .right .text{
+        font-size: 19px;
+    }
+    
+    .cal-inputs, .cal-inputs-content, .cal-inputs-predict, .cal-inputs-predict-content{
+        font-size: 15px;
+    }
+    .about1 .max-width .about1-content .text1{
+        font-size: 25px;
+    }
+    /* .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    } */
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
+
+
+.link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.input-form .row{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.input-field-1{
+    text-align: center;
+    justify-content: center;
+}
+
+
+.input-message{
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: .3s;
+    width: 45%;
+}
+
+.input-message:focus{
+    border-color: crimson;
+    box-shadow: 0 0 8px 0 crimson;
+}
+
+.button{
+    text-align: center;
+}
+
+.button button{
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: crimson;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+    border: none;
+}
+
+.button button:hover{
+    color: white;
+    background: crimson;
+    box-shadow: 0 0 10px crimson, 0 0 40px crimson, 0 0 80px crimson;
+    transition-delay: .5s;
+}
+
+.button button span{
+    position: absolute;
+    display: block;
+}
+
+.button button span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, crimson);
+}
+
+.button button:hover span:nth-child(1){
+    left: 100%;
+    transition: .75s;
+}
+
+.button button span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, crimson);
+}
+
+.button button:hover span:nth-child(3){
+    right: 100%;
+    transition: .75s;
+}
+
+.button button span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, crimson);
+}
+
+.button button:hover span:nth-child(2){
+    top: 100%;
+    transition: .75s;
+}
+
+.button button span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, crimson);
+}
+
+.button button:hover span:nth-child(4){
+    bottom: 100%;
+    transition: .75s;
+}
+
+
+
+/* About Us ---- Page*/
+
+.about1{
+    display: flex;
+    background: url("../images/Aboutus_3.jpeg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.about1 .max-width{
+  width: 100%;
+  display: flex;
+}
+.about1 .max-width .row{
+  margin-right: 0;
+}
+
+.about1 .about1-content span{
+    text-transform: uppercase;
+    display: block;
+}
+
+.about1 .about1-content{
+    justify-content: center;
+    transition: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+}
+.about1 .about1-content .text1{
+    color: crimson;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: text 2.5s 1;
+}
+
+@keyframes text{
+    0%{
+        color: white;
+    }
+    30%{
+        letter-spacing: 25px;
+    }
+    85%{
+        letter-spacing: 8px;
+    }
+}
+
+
+
+.about2{
+    padding-top: 200px;
+    color:black;
+    background: white;
+}
+.about2 .title::before{
+    background: black;
+}
+.about2 .title::after{
+    background-color: white;
+    content: "Details";
+}
+.about2-content{
+    text-align: center;
+}
+
+.about-btn{
+    color:black;
+    background: white;
+    text-align: center;
+}
+
+.about-btn a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about-btn a:hover{
+    color: crimson;
+    background: none;
+}
+
+/*------------------SMS Prediction Project-------------------*/
+
+/* SMS Description */
+.sms-des{
+    padding-top: 200px;
+    color:#fff;
+    background: #111;
+}
+.sms-des .title::before{
+    background: #fff;
+}
+.sms-des .title::after{
+    background-color: #111;
+    content: "Description";
+}
+.sms-des .sms-des-content .right{
+    width: 100%;
+}
+.sms-des .sms-des-content .right p{
+    text-align: justify;
+}
+
+/* SMS Data Cleaning */
+.sms-datacleaning{
+    color:rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+.sms-datacleaning .title::after{
+    background-color: rgb(255, 255, 255);
+    content: "Data Cleaning";
+}
+.sms-datacleaning .sms-datacleaning-content .left{
+    width: 45%;
+}
+.sms-datacleaning .sms-datacleaning-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.sms-datacleaning .sms-datacleaning-content .right{
+    width: 55%;
+}
+.sms-datacleaning .sms-datacleaning-content .right p{
+    text-align: justify;
+}
+
+
+
+/* SMS Data Preprocessing */
+.sms-datapreprocessing{
+    color:rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+.sms-datapreprocessing .title::before{
+    background: #fff;
+}
+.sms-datapreprocessing .title::after{
+    background-color: rgb(0, 0, 0);
+    content: "Preprocessing";
+}
+.sms-datapreprocessing .sms-datapreprocessing-content .left{
+    width: 45%;
+}
+.sms-datapreprocessing .sms-datapreprocessing-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.sms-datapreprocessing .sms-datapreprocessing-content .right{
+    width: 55%;
+}
+.sms-datapreprocessing .sms-datapreprocessing-content .right p{
+    text-align: justify;
+}
+
+/* SMS Data Modelling */
+.sms-modelling{
+    color:rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+.sms-modelling .title::before{
+    background: rgb(0, 0, 0);
+}
+.sms-modelling .title::after{
+    background-color: rgb(255, 255, 255);
+    content: "Data Modelling";
+}
+.sms-modelling .sms-modelling-content .left{
+    width: 45%;
+}
+.sms-modelling .sms-modelling-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.sms-modelling .sms-modelling-content .right{
+    width: 55%;
+}
+.sms-modelling .sms-modelling-content .right p{
+    text-align: justify;
+}
+
+/* SMS conclusion */
+.sms-con{
+    color:#fff;
+    background: #111;
+}
+.sms-con .title::before{
+    background: #fff;
+}
+.sms-con .title::after{
+    background-color: #111;
+    content: "Conclusion";
+}
+.sms-con .sms-con-content .right{
+    width: 100%;
+}
+.sms-con .sms-con-content .right p{
+    text-align: justify;
+}
+.sms-con .sms-con-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.sms-con .sms-con-content a:hover{
+    color: red;
+    background: none;
+}
+
+/* SMS Code */
+.sms-code{
+    padding-top: 200px;
+    color:#fff;
+    background: #111;
+}
+.sms-code .title::before{
+    background: #fff;
+}
+.sms-code .title::after{
+    background-color: #111;
+    content: "Code Here!";
+}
+.sms-code .sms-code-content .right{
+    width: 100%;
+}
+.sms-code .sms-code-content .right p{
+    text-align: justify;
+    font-size: 28px;
+}
+.code-import{
+    font-size: large;
+    text-align: justify;
+}
+
+.sms-code .sms-code-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.sms-code .sms-code-content a:hover{
+    color: crimson;
+    background: none;
+}
+
+
+/* SMS Prediction Input Area */
+.sms-inputs{
+    color:rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+.sms-inputs .title::before{
+    background: rgb(0, 0, 0);
+}
+.sms-inputs .title::after{
+    background-color: #fff;
+    content: "SMS Prediction";
+}
+.sms-inputs-content{
+    text-align: center;
+}
+
+.sms-inputs-predict{
+    padding-top: 200px;
+    color:#fff;
+    background: #111;
+}
+.sms-inputs-predict .title::before{
+    background: #fff;
+}
+.sms-inputs-predict .title::after{
+    background-color: #111;
+    content: "Predicted";
+}
+.sms-inputs-predict-content{
+    text-align: center;
+}
+
+
+/*------------------CCT Prediction Project-------------------*/
+
+
+/* CCT Description */
+.cct-des{
+    padding-top: 200px;
+    color:#fff;
+    background: #111;
+}
+.cct-des .title::before{
+    background: #fff;
+}
+.cct-des .title::after{
+    background-color: #111;
+    content: "Description";
+}
+.cct-des .cct-des-content .right{
+    width: 100%;
+}
+.cct-des .cct-des-content .right p{
+    text-align: justify;
+}
+
+/* CCT Data Cleaning */
+.cct-datacleaning{
+    color:rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+.cct-datacleaning .title::after{
+    background-color: rgb(255, 255, 255);
+    content: "Data Cleaning";
+}
+.cct-datacleaning .cct-datacleaning-content .left{
+    width: 45%;
+}
+.cct-datacleaning .cct-datacleaning-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.cct-datacleaning .cct-datacleaning-content .right{
+    width: 55%;
+}
+.cct-datacleaning .cct-datacleaning-content .right p{
+    text-align: justify;
+}
+
+
+
+/* CCT Data Modelling */
+.cct-modelling{
+    color:rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+.cct-modelling .title::before{
+    background: rgb(255, 255, 255);
+}
+.cct-modelling .title::after{
+    background-color: rgb(0, 0, 0);
+    content: "Data Modelling";
+}
+.cct-modelling .cct-modelling-content .left{
+    width: 45%;
+}
+.cct-modelling .cct-modelling-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.cct-modelling .cct-modelling-content .right{
+    width: 55%;
+}
+.cct-modelling .cct-modelling-content .right p{
+    text-align: justify;
+}
+
+/* CCT conclusion */
+.cct-con{
+    color:rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+.cct-con .title::before{
+    background: rgb(0, 0, 0);
+}
+.cct-con .title::after{
+    background-color: rgb(255, 255, 255);
+    content: "Conclusion";
+}
+.cct-con .cct-con-content .right{
+    width: 100%;
+}
+.cct-con .cct-con-content .right p{
+    text-align: justify;
+}
+.cct-con .cct-con-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.cct-con .cct-con-content a:hover{
+    color: red;
+    background: none;
+}
+
+/* CCt Prediction Input Area */
+.cct-inputs{
+    color:rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+.cct-inputs .title::before{
+    background: rgb(255, 255, 255);
+}
+.cct-inputs .title::after{
+    background-color: rgb(0, 0, 0);
+    content: "Prediction";
+}
+.cct-inputs-content{
+    text-align: center;
+}
+
+.cct-inputs-predict{
+    padding-top: 200px;
+    color:#fff;
+    background: #111;
+}
+.cct-inputs-predict .title::before{
+    background: #fff;
+}
+.cct-inputs-predict .title::after{
+    background-color: #111;
+    content: "Predicted";
+}
+.cct-inputs-predict-content{
+    text-align: center;
+}
+
+/*------------------GLD Prediction Project-------------------*/
+
+
+/* GLD Description */
+.gld-des{
+    padding-top: 200px;
+    color:#fff;
+    background: #111;
+}
+.gld-des .title::before{
+    background: #fff;
+}
+.gld-des .title::after{
+    background-color: #111;
+    content: "Description";
+}
+.gld-des .sms-des-content .right{
+    width: 100%;
+}
+.gld-des .sms-des-content .right p{
+    text-align: justify;
+}
+
+/* GLD Data Cleaning */
+.gld-datacleaning{
+    color:rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+.gld-datacleaning .title::after{
+    background-color: rgb(255, 255, 255);
+    content: "Data Cleaning";
+}
+.gld-datacleaning .gld-datacleaning-content .left{
+    width: 45%;
+}
+.gld-datacleaning .gld-datacleaning-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.gld-datacleaning .gld-datacleaning-content .right{
+    width: 55%;
+}
+.gld-datacleaning .gld-datacleaning-content .right p{
+    text-align: justify;
+}
+
+
+
+/* GLD Data Preprocessing */
+.gld-datapreprocessing{
+    color:rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+.gld-datapreprocessing .title::before{
+    background: #fff;
+}
+.gld-datapreprocessing .title::after{
+    background-color: rgb(0, 0, 0);
+    content: "Preprocessing";
+}
+.gld-datapreprocessing .gld-datapreprocessing-content .left{
+    width: 45%;
+}
+.gld-datapreprocessing .gld-datapreprocessing-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.gld-datapreprocessing .gld-datapreprocessing-content .right{
+    width: 55%;
+}
+.gld-datapreprocessing .gld-datapreprocessing-content .right p{
+    text-align: justify;
+}
+
+/* GLD Data Modelling */
+.gld-modelling{
+    color:rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+.gld-modelling .title::before{
+    background: rgb(0, 0, 0);
+}
+.gld-modelling .title::after{
+    background-color: rgb(255, 255, 255);
+    content: "Data Modelling";
+}
+.gld-modelling .gld-modelling-content .left{
+    width: 45%;
+}
+.gld-modelling .gld-modelling-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.gld-modelling .gld-modelling-content .right{
+    width: 55%;
+}
+.gld-modelling .gld-modelling-content .right p{
+    text-align: justify;
+}
+
+/* GLD conclusion */
+.gld-con{
+    color:#fff;
+    background: #111;
+}
+.gld-con .title::before{
+    background: #fff;
+}
+.gld-con .title::after{
+    background-color: #111;
+    content: "Conclusion";
+}
+.gld-con .sms-con-content .right{
+    width: 100%;
+}
+.gld-con .gld-con-content .right p{
+    text-align: justify;
+}
+.gld-con .gld-con-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.gld-con .gld-con-content a:hover{
+    color: red;
+    background: none;
+}
+/* gld Prediction Input Area */
+.gld-inputs{
+    color:rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+.gld-inputs .title::before{
+    background: rgb(255, 255, 255);
+}
+.gld-inputs .title::after{
+    background-color: rgb(0, 0, 0);
+    content: "Prediction";
+}
+.gld-inputs-content{
+    text-align: center;
+}
+.gld-inputs-predict{
+    padding-top: 200px;
+    color:#fff;
+    background: #111;
+}
+.gld-inputs-predict .title::before{
+    background: #fff;
+}
+.gld-inputs-predict .title::after{
+    background-color: #111;
+    content: "Predicted";
+}
+.gld-inputs-predict-content{
+    text-align: center;
+}
+
+
+/*------------------CAL Prediction Project-------------------*/
+
+
+/* CAL Description */
+.cal-des{
+    padding-top: 200px;
+    color:#fff;
+    background: #111;
+}
+.cal-des .title::before{
+    background: #fff;
+}
+.cal-des .title::after{
+    background-color: #111;
+    content: "Description";
+}
+.cal-des .cal-des-content .right{
+    width: 100%;
+}
+.cal-des .cal-des-content .right p{
+    text-align: justify;
+}
+
+/* CAL Data Cleaning */
+.cal-datacleaning{
+    color:rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+.cal-datacleaning .title::after{
+    background-color: rgb(255, 255, 255);
+    content: "Data Cleaning";
+}
+.cal-datacleaning .cal-datacleaning-content .left{
+    width: 45%;
+}
+.cal-datacleaning .cal-datacleaning-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.cal-datacleaning .cal-datacleaning-content .right{
+    width: 55%;
+}
+.cal-datacleaning .cal-datacleaning-content .right p{
+    text-align: justify;
+}
+
+
+
+/* CAL Data Preprocessing */
+.cal-datapreprocessing{
+    color:rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+.cal-datapreprocessing .title::before{
+    background: #fff;
+}
+.cal-datapreprocessing .title::after{
+    background-color: rgb(0, 0, 0);
+    content: "Preprocessing";
+}
+.cal-datapreprocessing .cal-datapreprocessing-content .left{
+    width: 45%;
+}
+.cal-datapreprocessing .cal-datapreprocessing-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.cal-datapreprocessing .cal-datapreprocessing-content .right{
+    width: 55%;
+}
+.cal-datapreprocessing .cal-datapreprocessing-content .right p{
+    text-align: justify;
+}
+
+/* CAL Data Modelling */
+.cal-modelling{
+    color:rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+.cal-modelling .title::before{
+    background: rgb(0, 0, 0);
+}
+.cal-modelling .title::after{
+    background-color: rgb(255, 255, 255);
+    content: "Data Modelling";
+}
+.cal-modelling .cal-modelling-content .left{
+    width: 45%;
+}
+.cal-modelling .cal-modelling-content .left img{
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+}
+.cal-modelling .cal-modelling-content .right{
+    width: 55%;
+}
+.cal-modelling .cal-modelling-content .right p{
+    text-align: justify;
+}
+
+/* CAL conclusion */
+.cal-con{
+    color:#fff;
+    background: #111;
+}
+.cal-con .title::before{
+    background: #fff;
+}
+.cal-con .title::after{
+    background-color: #111;
+    content: "Conclusion";
+}
+.cal-con .cal-con-content .right{
+    width: 100%;
+}
+.cal-con .cal-con-content .right p{
+    text-align: justify;
+}
+.cal-con .cal-con-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.cal-con .cal-con-content a:hover{
+    color: red;
+    background: none;
+}
+
+
+
+/* cal Prediction Input Area */
+.cal-inputs{
+    color:rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+.cal-inputs .title::before{
+    background: rgb(255, 255, 255);
+}
+.cal-inputs .title::after{
+    background-color: rgb(0, 0, 0);
+    content: "Prediction";
+}
+.cal-inputs-content{
+    text-align: center;
+}
+
+.cal-inputs-predict{
+    padding-top: 200px;
+    color:#fff;
+    background: #111;
+}
+.cal-inputs-predict .title::before{
+    background: #fff;
+}
+.cal-inputs-predict .title::after{
+    background-color: #111;
+    content: "Predicted";
+}
+.cal-inputs-predict-content{
+    text-align: center;
+}
+
+
+/* About Ebrahim */
+.about-ebrahim{
+    padding-top: 100px;
+    color:#fff;
+    background: #111;
+}
+
+.about-ebrahim .title::before{
+    background-color: #fff;
+}
+
+.about-ebrahim .title::after{
+    background-color: #111;
+    content: "Ebrahim";
+}
+.about-ebrahim .about-ebrahim-content .left{
+    width: 45%;
+}
+.about-ebrahim .about-ebrahim-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about-ebrahim .about-ebrahim-content .right{
+    width: 55%;
+}
+.about-ebrahim .about-ebrahim-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-ebrahim .about-ebrahim-content .right .text span{
+    color: crimson;
+}
+.about-ebrahim .about-ebrahim-content .right p{
+    text-align: justify;
+}
+.about-ebrahim .about-ebrahim-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about-ebrahim .about-ebrahim-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+/* About Shahul */
+.about-shahul{
+    padding-top: 100px;
+    color:#fff;
+    background: #111;
+}
+
+.about-shahul .title::before{
+    background-color: #fff;
+}
+
+.about-shahul .title::after{
+    background-color: #111;
+    content: "Ebrahim";
+}
+.about-shahul .about-shahul-content .left{
+    width: 45%;
+}
+.about-shahul .about-shahul-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about-shahul .about-shahul-content .right{
+    width: 55%;
+}
+.about-shahul .about-shahul-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-shahul .about-shahul-content .right .text span{
+    color: crimson;
+}
+.about-shahul .about-shahul-content .right p{
+    text-align: justify;
+}
+.about-shahul .about-shahul-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about-shahul .about-shahul-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+/* About Nijam */
+.about-nijam{
+    padding-top: 100px;
+    color:#fff;
+    background: #111;
+}
+
+.about-nijam .title::before{
+    background-color: #fff;
+}
+
+.about-nijam .title::after{
+    background-color: #111;
+    content: "Ebrahim";
+}
+.about-nijam .about-nijam-content .left{
+    width: 45%;
+}
+.about-nijam .about-nijam-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about-nijam .about-nijam-content .right{
+    width: 55%;
+}
+.about-nijam .about-nijam-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-nijam .about-nijam-content .right .text span{
+    color: crimson;
+}
+.about-nijam .about-nijam-content .right p{
+    text-align: justify;
+}
+.about-nijam .about-nijam-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about-nijam .about-nijam-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+
+/* About mukesh */
+.about-mukesh{
+    padding-top: 100px;
+    color:#fff;
+    background: #111;
+}
+
+.about-mukesh .title::before{
+    background-color: #fff;
+}
+
+.about-mukesh .title::after{
+    background-color: #111;
+    content: "Ebrahim";
+}
+.about-mukesh .about-mukesh-content .left{
+    width: 45%;
+}
+.about-mukesh .about-mukesh-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about-mukesh .about-mukesh-content .right{
+    width: 55%;
+}
+.about-mukesh .about-mukesh-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-mukesh .about-mukesh-content .right .text span{
+    color: crimson;
+}
+.about-mukesh .about-mukesh-content .right p{
+    text-align: justify;
+}
+.about-mukesh .about-mukesh-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about-mukesh .about-mukesh-content .right a:hover{
+    color: crimson;
+    background: none;
+}

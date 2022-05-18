@@ -41,9 +41,9 @@ section{
 .about,.about-ebrahim, .about-shahul, .about-nijam, .about-mukesh, .services, .skills, .teams, 
 .sms-des, .sms-datacleaning, .sms-datapreprocessing, .sms-modelling, .sms-con, 
 .cct-des, .cct-datacleaning, .cct-datapreprocessing, .cct-modelling, .cct-con,
-.gld-des, .gld-datacleaning, .gld-datapreprocessing, .gld-modelling, .gld-con,
-.cal-des, .cal-datacleaning, .cal-datapreprocessing, .cal-modelling, .cal-con, 
-.sms-code, .sms-inputs, .sms-inputs-predict, 
+.gld-des, .gld-datacleaning, .gld-eda, .gld-modelling, .gld-con,
+.cal-des, .cal-datacleaning, .cal-eda, .cal-modelling, .cal-con, 
+.sms-inputs, .sms-inputs-predict, 
 .container_about, 
 .cct-inputs, .cct-inputs-predict,
 .gld-inputs, .gld-inputs-predict,
@@ -65,7 +65,6 @@ footer{
 .sms-datapreprocessing .sms-datapreprocessing-content,
 .sms-modelling .sms-modelling-content,
 .sms-con .sms-con-content,
-.sms-code .sms-code-content,
 .sms-inputs, .sms-inputs-predict,
 .cct-inputs, .cct-inputs-predict,
 .cct-des .cct-des-content,
@@ -76,13 +75,13 @@ footer{
 .gld-inputs, .gld-inputs-predict,
 .gld-des .gld-des-content,
 .gld-datacleaning .gld-datacleaning-content,
-.gld-datapreprocessing .gld-datapreprocessing-content,
+.gld-eda .gld-eda-content,
 .gld-modelling .gld-modelling-content,
 .gld-con .gld-con-content,
 .cal-inputs, .cal-inputs-predict,
 .cal-des .cal-des-content,
 .cal-datacleaning .cal-datacleaning-content,
-.cal-datapreprocessing .cal-datapreprocessing-content,
+.cal-eda .cal-eda-content,
 .cal-modelling .cal-modelling-content,
 .cal-con .cal-con-content{
     display: flex;
@@ -487,101 +486,228 @@ section .title::after{
     background: crimson!important;
 }
 
-/* contact section styling */
-/* .contact .title::after{
-    content: "get in touch";
+/* About Ebrahim */
+.about-ebrahim{
+    padding-top: 100px;
+    color:#fff;
+    background: #111;
 }
-.contact .contact-content .column{
-    width: calc(50% - 30px);
+
+.about-ebrahim .title::before{
+    background-color: #fff;
 }
-.contact .contact-content .text{
-    font-size: 20px;
+
+.about-ebrahim .title::after{
+    background-color: #111;
+    content: "Ebrahim";
+}
+.about-ebrahim .about-ebrahim-content .left{
+    width: 45%;
+}
+.about-ebrahim .about-ebrahim-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about-ebrahim .about-ebrahim-content .right{
+    width: 55%;
+}
+.about-ebrahim .about-ebrahim-content .right .text{
+    font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.contact .contact-content .left p{
-    text-align: justify;
-}
-.contact .contact-content .left .icons{
-    margin: 10px 0;
-}
-.contact .contact-content .row{
-    display: flex;
-    height: 65px;
-    align-items: center;
-}
-.contact .contact-content .row .info{
-    margin-left: 30px;
-}
-.contact .contact-content .row i{
-    font-size: 25px;
+.about-ebrahim .about-ebrahim-content .right .text span{
     color: crimson;
 }
-.contact .contact-content .info .head{
+.about-ebrahim .about-ebrahim-content .right p{
+    text-align: justify;
+}
+.about-ebrahim .about-ebrahim-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
     font-weight: 500;
-}
-.contact .contact-content .info .sub-title{
-    color: #333;
-}
-.contact .right form .fields{
-    display: flex;
-}
-.contact .right form .field,
-.contact .right form .fields .field{
-    height: 45px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-.contact .right form .textarea{
-    height: 80px;
-    width: 100%;
-}
-.contact .right form .name{
-    margin-right: 10px;
-}
-.contact .right form .field input,
-.contact .right form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    border: 1px solid lightgrey;
+    padding: 10px 30px;
+    margin-top: 20px;
     border-radius: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
+    border: 2px solid crimson;
     transition: all 0.3s ease;
 }
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus{
-    border-color: #b3b3b3;
+.about-ebrahim .about-ebrahim-content .right a:hover{
+    color: crimson;
+    background: none;
 }
-.contact .right form .textarea textarea{
-  padding-top: 10px;
-  resize: none;
+
+/* About Shahul */
+.about-shahul{
+    padding-top: 100px;
+    color:#fff;
+    background: #111;
 }
-.contact .right form .button-area{
-  display: flex;
-  align-items: center;
+
+.about-shahul .title::before{
+    background-color: #fff;
 }
-.right form .button-area button{
-  color: #fff;
-  display: block;
-  width: 160px!important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
+
+.about-shahul .title::after{
+    background-color: #111;
+    content: "Shahul";
 }
-.right form .button-area button:hover{
-  color: crimson;
-  background: none;
-} */
+.about-shahul .about-shahul-content .left{
+    width: 45%;
+}
+.about-shahul .about-shahul-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about-shahul .about-shahul-content .right{
+    width: 55%;
+}
+.about-shahul .about-shahul-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-shahul .about-shahul-content .right .text span{
+    color: crimson;
+}
+.about-shahul .about-shahul-content .right p{
+    text-align: justify;
+}
+.about-shahul .about-shahul-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about-shahul .about-shahul-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+/* About Nijam */
+.about-nijam{
+    padding-top: 100px;
+    color:#fff;
+    background: #111;
+}
+
+.about-nijam .title::before{
+    background-color: #fff;
+}
+
+.about-nijam .title::after{
+    background-color: #111;
+    content: "Nijam";
+}
+.about-nijam .about-nijam-content .left{
+    width: 45%;
+}
+.about-nijam .about-nijam-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about-nijam .about-nijam-content .right{
+    width: 55%;
+}
+.about-nijam .about-nijam-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-nijam .about-nijam-content .right .text span{
+    color: crimson;
+}
+.about-nijam .about-nijam-content .right p{
+    text-align: justify;
+}
+.about-nijam .about-nijam-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about-nijam .about-nijam-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+
+/* About mukesh */
+.about-mukesh{
+    padding-top: 100px;
+    color:#fff;
+    background: #111;
+}
+
+.about-mukesh .title::before{
+    background-color: #fff;
+}
+
+.about-mukesh .title::after{
+    background-color: #111;
+    content: "Mukesh";
+}
+.about-mukesh .about-mukesh-content .left{
+    width: 45%;
+}
+.about-mukesh .about-mukesh-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about-mukesh .about-mukesh-content .right{
+    width: 55%;
+}
+.about-mukesh .about-mukesh-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-mukesh .about-mukesh-content .right .text span{
+    color: crimson;
+}
+.about-mukesh .about-mukesh-content .right p{
+    text-align: justify;
+}
+.about-mukesh .about-mukesh-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about-mukesh .about-mukesh-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+
 /* footer section styling */
 footer{
     background: #111;
@@ -621,8 +747,8 @@ footer span a:hover{
     }
     .sms-datapreprocessing .sms-datapreprocessing-content .left .img,
     .cct-datapreprocessing .cct-datapreprocessing-content .left .img,
-    .gld-datapreprocessing .gld-datapreprocessing-content .left .img,
-    .cal-datapreprocessing .cal-datapreprocessing-content .left .img{
+    .gld-eda .gld-eda-content .left .img,
+    .cal-eda .cal-eda-content .left .img{
         max-height: 350px;
         max-width: 350px;
     }
@@ -700,42 +826,27 @@ footer span a:hover{
     .max-width{
         max-width: 930px;
     }
-    .about .about-content .column{
+    .about .about-content .column,
+    .about-shahul .about-shahul-content .column,
+    .about-nijam .about-nijam-content .column,
+    .about-mukesh .about-mukesh-content .column{
         width: 100%;
     }
-    .about .about-content .left{
+    .about .about-content .left,
+    .about-shahul .about-shahul-content .left,
+    .about-nijam .about-nijam-content .left,
+    .about-mukesh .about-mukesh-content .left{
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
     }
-    .about .about-content .right{
+    .about .about-content .right,
+    .about-ebrahim .about-ebrahim-content .right,
+    .about-shahul .about-shahul-content .right,
+    .about-nijam .about-nijam-content .right,
+    .about-mukesh .about-mukesh-content .right{
         flex: 100%;
     }
-    /* About-Ebrahim */
-    .about-ebrahim .about-ebrahim-content .column{
-        width: 100%;
-    }
-    .about-ebrahim .about-ebrahim-content .left{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .about-ebrahim .about-ebrahim-content .right{
-        flex: 100%;
-    }
-    /* About-Shahul */
-    .about-shahul .about-shahul-content .column{
-        width: 100%;
-    }
-    .about-shahul .about-shahul-content .left{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .about-shahul .about-ebrahim-content .right{
-        flex: 100%;
-    }
-
     .services .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
@@ -773,22 +884,22 @@ footer span a:hover{
     }
     .sms-datapreprocessing .sms-datapreprocessing-content .column,
     .cct-datapreprocessing .cct-datapreprocessing-content .column,
-    .gld-datapreprocessing .gld-datapreprocessing-content .column,
-    .cal-datapreprocessing .cal-datapreprocessing-content .column{
+    .gld-eda .gld-eda-content .column,
+    .cal-eda .cal-eda-content .column{
         width: 100%;
     }
     .sms-datapreprocessing .sms-datapreprocessing-content .left,
     .cct-datapreprocessing .cct-datapreprocessing-content .left,
-    .gld-datapreprocessing .gld-datapreprocessing-content .left,
-    .cal-datapreprocessing .cal-datapreprocessing-content .left{
+    .gld-eda .gld-eda-content .left,
+    .cal-eda .cal-eda-content .left{
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
     }
     .sms-datapreprocessing .sms-datapreprocessing-content .right,
     .cct-datapreprocessing .cct-datapreprocessing-content .right,
-    .gld-datapreprocessing .gld-datapreprocessing-content .right,
-    .cal-datapreprocessing .cal-datapreprocessing-content .right{
+    .gld-eda .gld-eda-content .right,
+    .cal-eda .cal-eda-content .right{
         flex: 100%;
     }
     .sms-modelling .sms-modelling-content .column,
@@ -873,7 +984,6 @@ footer span a:hover{
     .sms-datapreprocessing .sms-datapreprocessing-content .right .text,
     .sms-modelling .sms-modelling-content .right .text,
     .sms-con .sms-con-content .right .text,
-    .sms-code .sms-code-content, 
     .sms-inputs, .sms-inputs-content, .sms-inputs-predict, .sms-inputs-predict-content,
     .cct-des .cct-des-content .right .text,
     .cct-datacleaning .cct-datacleaning-content .right .text,
@@ -883,13 +993,13 @@ footer span a:hover{
     .cct-inputs, .cct-inputs-content, .cct-inputs-predict, .cct-inputs-predict-content,
     .gld-des .gld-des-content .right .text,
     .gld-datacleaning .gld-datacleaning-content .right .text,
-    .gld-datapreprocessing .gld-datapreprocessing-content .right .text,
+    .gld-eda .gld-eda-content .right .text,
     .gld-modelling .gld-modelling-content .right .text,
     .gld-con .gld-con-content .right .text,
     .gld-inputs, .gld-inputs-content, .gld-inputs-predict, .gld-inputs-predict-content,
     .cal-des .cal-des-content .right .text,
     .cal-datacleaning .cal-datacleaning-content .right .text,
-    .cal-datapreprocessing .cal-datapreprocessing-content .right .text,
+    .cal-eda .cal-eda-content .right .text,
     .cal-modelling .cal-modelling-content .right .text,
     .cal-con .cal-con-content .right .text{
         font-size: 19px;
@@ -1280,49 +1390,6 @@ footer span a:hover{
     background: none;
 }
 
-/* SMS Code */
-.sms-code{
-    padding-top: 200px;
-    color:#fff;
-    background: #111;
-}
-.sms-code .title::before{
-    background: #fff;
-}
-.sms-code .title::after{
-    background-color: #111;
-    content: "Code Here!";
-}
-.sms-code .sms-code-content .right{
-    width: 100%;
-}
-.sms-code .sms-code-content .right p{
-    text-align: justify;
-    font-size: 28px;
-}
-.code-import{
-    font-size: large;
-    text-align: justify;
-}
-
-.sms-code .sms-code-content a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.sms-code .sms-code-content a:hover{
-    color: crimson;
-    background: none;
-}
-
-
 /* SMS Prediction Input Area */
 .sms-inputs{
     color:rgb(0, 0, 0);
@@ -1554,32 +1621,32 @@ footer span a:hover{
 
 
 
-/* GLD Data Preprocessing */
-.gld-datapreprocessing{
+/* GLD EDA */
+.gld-eda{
     color:rgb(255, 255, 255);
     background: rgb(0, 0, 0);
 }
-.gld-datapreprocessing .title::before{
+.gld-eda .title::before{
     background: #fff;
 }
-.gld-datapreprocessing .title::after{
+.gld-eda .title::after{
     background-color: rgb(0, 0, 0);
-    content: "Preprocessing";
+    content: "EDA";
 }
-.gld-datapreprocessing .gld-datapreprocessing-content .left{
+.gld-eda .gld-eda-content .left{
     width: 45%;
 }
-.gld-datapreprocessing .gld-datapreprocessing-content .left img{
+.gld-eda .gld-eda-content .left img{
     object-fit: cover;
     border-radius: 6px;
     max-width: 400px;
     max-height: 400px;
     display: block;
 }
-.gld-datapreprocessing .gld-datapreprocessing-content .right{
+.gld-eda .gld-eda-content .right{
     width: 55%;
 }
-.gld-datapreprocessing .gld-datapreprocessing-content .right p{
+.gld-eda .gld-eda-content .right p{
     text-align: justify;
 }
 
@@ -1648,14 +1715,14 @@ footer span a:hover{
 }
 /* gld Prediction Input Area */
 .gld-inputs{
-    color:rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
-}
-.gld-inputs .title::before{
+    color:rgb(0, 0, 0);
     background: rgb(255, 255, 255);
 }
+.gld-inputs .title::before{
+    background: rgb(0, 0, 0);
+}
 .gld-inputs .title::after{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     content: "Prediction";
 }
 .gld-inputs-content{
@@ -1729,32 +1796,32 @@ footer span a:hover{
 
 
 
-/* CAL Data Preprocessing */
-.cal-datapreprocessing{
+/* CAL EDA */
+.cal-eda{
     color:rgb(255, 255, 255);
     background: rgb(0, 0, 0);
 }
-.cal-datapreprocessing .title::before{
+.cal-eda .title::before{
     background: #fff;
 }
-.cal-datapreprocessing .title::after{
+.cal-eda .title::after{
     background-color: rgb(0, 0, 0);
-    content: "Preprocessing";
+    content: "EDA";
 }
-.cal-datapreprocessing .cal-datapreprocessing-content .left{
+.cal-eda .cal-eda-content .left{
     width: 45%;
 }
-.cal-datapreprocessing .cal-datapreprocessing-content .left img{
+.cal-eda .cal-eda-content .left img{
     object-fit: cover;
     border-radius: 6px;
     max-width: 400px;
     max-height: 400px;
     display: block;
 }
-.cal-datapreprocessing .cal-datapreprocessing-content .right{
+.cal-eda .cal-eda-content .right{
     width: 55%;
 }
-.cal-datapreprocessing .cal-datapreprocessing-content .right p{
+.cal-eda .cal-eda-content .right p{
     text-align: justify;
 }
 
@@ -1826,14 +1893,14 @@ footer span a:hover{
 
 /* cal Prediction Input Area */
 .cal-inputs{
-    color:rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
-}
-.cal-inputs .title::before{
+    color:rgb(0, 0, 0);
     background: rgb(255, 255, 255);
 }
+.cal-inputs .title::before{
+    background: rgb(0, 0, 0);
+}
 .cal-inputs .title::after{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     content: "Prediction";
 }
 .cal-inputs-content{
@@ -1857,223 +1924,3 @@ footer span a:hover{
 }
 
 
-/* About Ebrahim */
-.about-ebrahim{
-    padding-top: 100px;
-    color:#fff;
-    background: #111;
-}
-
-.about-ebrahim .title::before{
-    background-color: #fff;
-}
-
-.about-ebrahim .title::after{
-    background-color: #111;
-    content: "Ebrahim";
-}
-.about-ebrahim .about-ebrahim-content .left{
-    width: 45%;
-}
-.about-ebrahim .about-ebrahim-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-.about-ebrahim .about-ebrahim-content .right{
-    width: 55%;
-}
-.about-ebrahim .about-ebrahim-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.about-ebrahim .about-ebrahim-content .right .text span{
-    color: crimson;
-}
-.about-ebrahim .about-ebrahim-content .right p{
-    text-align: justify;
-}
-.about-ebrahim .about-ebrahim-content .right a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.about-ebrahim .about-ebrahim-content .right a:hover{
-    color: crimson;
-    background: none;
-}
-
-/* About Shahul */
-.about-shahul{
-    padding-top: 100px;
-    color:#fff;
-    background: #111;
-}
-
-.about-shahul .title::before{
-    background-color: #fff;
-}
-
-.about-shahul .title::after{
-    background-color: #111;
-    content: "Ebrahim";
-}
-.about-shahul .about-shahul-content .left{
-    width: 45%;
-}
-.about-shahul .about-shahul-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-.about-shahul .about-shahul-content .right{
-    width: 55%;
-}
-.about-shahul .about-shahul-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.about-shahul .about-shahul-content .right .text span{
-    color: crimson;
-}
-.about-shahul .about-shahul-content .right p{
-    text-align: justify;
-}
-.about-shahul .about-shahul-content .right a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.about-shahul .about-shahul-content .right a:hover{
-    color: crimson;
-    background: none;
-}
-
-/* About Nijam */
-.about-nijam{
-    padding-top: 100px;
-    color:#fff;
-    background: #111;
-}
-
-.about-nijam .title::before{
-    background-color: #fff;
-}
-
-.about-nijam .title::after{
-    background-color: #111;
-    content: "Ebrahim";
-}
-.about-nijam .about-nijam-content .left{
-    width: 45%;
-}
-.about-nijam .about-nijam-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-.about-nijam .about-nijam-content .right{
-    width: 55%;
-}
-.about-nijam .about-nijam-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.about-nijam .about-nijam-content .right .text span{
-    color: crimson;
-}
-.about-nijam .about-nijam-content .right p{
-    text-align: justify;
-}
-.about-nijam .about-nijam-content .right a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.about-nijam .about-nijam-content .right a:hover{
-    color: crimson;
-    background: none;
-}
-
-
-/* About mukesh */
-.about-mukesh{
-    padding-top: 100px;
-    color:#fff;
-    background: #111;
-}
-
-.about-mukesh .title::before{
-    background-color: #fff;
-}
-
-.about-mukesh .title::after{
-    background-color: #111;
-    content: "Ebrahim";
-}
-.about-mukesh .about-mukesh-content .left{
-    width: 45%;
-}
-.about-mukesh .about-mukesh-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-.about-mukesh .about-mukesh-content .right{
-    width: 55%;
-}
-.about-mukesh .about-mukesh-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.about-mukesh .about-mukesh-content .right .text span{
-    color: crimson;
-}
-.about-mukesh .about-mukesh-content .right p{
-    text-align: justify;
-}
-.about-mukesh .about-mukesh-content .right a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.about-mukesh .about-mukesh-content .right a:hover{
-    color: crimson;
-    background: none;
-}

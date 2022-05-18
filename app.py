@@ -69,9 +69,9 @@ def teams():
 def projectsmsprediction():
     return render_template('smsprediction.html')
 
-@app.route('/projectsmscode', methods=['GET','POST'])
-def projectsmspredictioncode():
-    return render_template('smspredictioncode.html')
+# @app.route('/projectsmscode', methods=['GET','POST'])
+# def projectsmspredictioncode():
+#     return render_template('smspredictioncode.html')
 
 # projects routes
 
@@ -94,9 +94,9 @@ def predictsms():
 def projectcctprediction():
     return render_template('cctprediction.html')
 
-@app.route('/projectcctcode', methods=['GET','POST'])
-def projectcctpredictioncode():
-    return render_template('cctpredictioncode.html')
+# @app.route('/projectcctcode', methods=['GET','POST'])
+# def projectcctpredictioncode():
+#     return render_template('cctpredictioncode.html')
 
 @app.route("/predictcct", methods = ["GET", "POST"])
 def predictcct():
@@ -111,9 +111,9 @@ def predictcct():
 def projectgldprediction():
     return render_template('gldprediction.html')
 
-@app.route('/projectgldcode', methods=['GET','POST'])
-def projectgldpredictioncode():
-    return render_template('gldpredictioncode.html')
+# @app.route('/projectgldcode', methods=['GET','POST'])
+# def projectgldpredictioncode():
+#     return render_template('gldpredictioncode.html')
 
 @app.route("/predictgld", methods = ["GET", "POST"])
 def predictgld():
@@ -128,9 +128,9 @@ def predictgld():
 def projectcalprediction():
     return render_template('calprediction.html')
 
-@app.route('/projectcalcode', methods=['GET','POST'])
-def projectcalpredictioncode():
-    return render_template('calpredictioncode.html')
+# @app.route('/projectcalcode', methods=['GET','POST'])
+# def projectcalpredictioncode():
+#     return render_template('calpredictioncode.html')
 
 @app.route("/predictcal", methods = ["GET", "POST"])
 def predictcal():

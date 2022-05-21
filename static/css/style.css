@@ -416,13 +416,78 @@ section .title::after{
 .skills-content .right .python::before{
     width: 70%;
 }
+.skills-content .right .pythonmukesh::before{
+    width: 60%;
+}
+.skills-content .right .pythonnijam::before{
+    width: 75%;
+}
+.skills-content .right .pythonebi::before{
+    width: 80%;
+}
 .skills-content .right .machinelearning::before{
     width: 70%;
+}
+.skills-content .right .machinelearningnijam::before{
+    width: 75%;
 }
 .skills-content .right .Programmingknowledge::before{
     width: 75%;
 }
-
+.skills-content .right .Programmingknowledge::before{
+    width: 80%;
+}
+.skills-content .right .java::before{
+    width: 55%;
+}
+.skills-content .right .javanijam::before{
+    width: 50%;
+}
+.skills-content .right .statisticsandprobability::before{
+    width: 70%;
+}
+.skills-content .right .statisticsandprobabilitynijam::before{
+    width: 85%;
+}
+.skills-content .right .meachinelearningandartificialintelligence::before{
+    width: 70%;
+}
+.skills-content .right .rprogramming::before{
+    width: 50%;
+}
+.skills-content .right .rprogrammingnijam::before{
+    width: 75%;
+}
+.skills-content .right .mysql::before{
+    width: 60%;
+}
+.skills-content .right .mysqlnijam::before{
+    width: 70%;
+}
+.skills-content .right .htmlcss::before{
+    width: 70%;
+}
+.skills-content .right .htmlcssnijam::before{
+    width: 65%;
+}
+.skills-content .right .javascript::before{
+    width: 70%;
+}
+.skills-content .right .cloud::before{
+    width: 85%;
+}
+.skills-content .right .restapi::before{
+    width: 70%;
+}
+.skills-content .right .docker::before{
+    width: 65%;
+}
+.skills-content .right .mongodb::before{
+    width: 75%;
+}
+.skills-content .right .mysqlebi::before{
+    width: 75%;
+}
 /* teams section styling */
 .teams .title::after{
     content: "who with me";
